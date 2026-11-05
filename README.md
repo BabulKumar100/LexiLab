@@ -223,24 +223,24 @@ LexiLab/
 
 ---
 
-## 🎓 College Viva Quick Reference
+## License
 
-1. **What is Maximal Munch?**
-   The scanner consumes the longest prefix that still matches a valid token pattern before emitting a
-   token: `a+++b` → `(a++) + b`, not `(a) + (++b)`.
-2. **Token vs. Lexeme vs. Pattern**
-   - *Pattern*: the rule (regex / grammar) — e.g. `[A-Za-z_][A-Za-z0-9_]*`
-   - *Lexeme*: the actual characters in the source — e.g. `total_sum`
-   - `Token`: the category handed to the parser — e.g. `<IDENTIFIER, total_sum>`
-3. **Why DFA instead of NFA?**
-   A DFA has no ambiguity or ε-moves, so recognition is $\mathcal{O}(n)$ in a single pass with no
-   backtracking — which is why real scanners are table-driven DFAs.
-4. **Is `printf` a function token?**
-   No. At the lexical level `printf` is an `IDENTIFIER`; only the parser (after seeing `(`) knows it is a
-   call. LexiLab keeps that distinction and reports the lookahead as a *hint*, never as a token type.
-5. **Can a symbol table store types?**
-   The scanner records names and positions. Type and scope are *semantic* — LexiLab displays them, but
-   labels them as later-phase extras so the lexical boundary stays honest.
-6. **Why are comments not in the token stream?**
-   A compiler front-end discards them. LexiLab skips them by default and offers an explicit toggle so you
-   can show the `COMMENT` tokens when the lab asks about them.
+This project is distributed under the MIT License.
+
+See the [LICENSE](LICENSE) file for more information.
+
+## Author
+
+**Babul Kumar**
+
+B.Tech Computer Science & Engineering Student
+
+- GitHub: [@BabulKumar100](https://github.com/BabulKumar100)
+- LinkedIn: [Babul Kumar](https://www.linkedin.com/in/babulkumar100)
+
+---
+
+<p align="center">
+  <strong>NetSim – Smart Campus Network Simulator</strong>
+  <br />
+  <em>Understand Networking. 
