@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233B82F6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 17 22 12'/><polyline points='2 17 12 22 22 17'/><polyline points='2 12 12 17 22 12'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>LexiLab — Interactive Lexical Analyzer &amp; Tokenization Simulator</title>
+    <meta name="description" content="LexiLab scans C-like source code with a real DFA-based lexical analyzer: token stream, extended symbol table, error diagnostics, interactive DFA visualizer, maximal munch and lookahead traces. Built for Compiler Design labs and viva." />
+    <meta name="theme-color" content="#070B14" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LexiLab — Interactive Lexical Analyzer Simulator" />
+    <meta property="og:description" content="Step through a real C-like scanner: tokens, symbol table, DFA states, maximal munch and lexical error diagnostics." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Painted before CSS/JS arrive so the first frame is never a white flash. */
+      html, body { background-color: #070B14; margin: 0; }
+      #boot {
+        position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+        flex-direction: column; gap: 14px; font-family: Inter, system-ui, sans-serif;
+        color: #64748B; font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+      }
+      #boot span { width: 30px; height: 30px; border-radius: 9999px; border: 2px solid #1E2F4D; border-top-color: #22D3EE; animation: bootspin .8s linear infinite; }
+      @keyframes bootspin { to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body class="bg-[#070B14] text-slate-100 antialiased selection:bg-blue-500/30 selection:text-cyan-300 overflow-x-hidden min-h-screen">
+    <div id="root"></div>
+    <div id="boot"><span></span>LexiLab</div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
